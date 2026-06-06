@@ -427,7 +427,7 @@
         <h1>Forest Dunes Cup</h1>
         <p class="subtitle">Three days, one loose practice day, four official Ryder Cup sessions, one possible Bootlegger playoff, and approximately 1,000 excuses about wind, lies, sand, pace, breakfast, and vibes.</p>
         <p style="margin:10px 0 0; font-family:'Permanent Marker',cursive; color:#ff5446; font-size:16px; text-shadow:0 2px 6px rgba(0,0,0,.75);">Unofficially presented by Michelob Ultra &middot; fueled by Casamigos, transfusions, and one regrettable bottle of Fireball.</p>
-        <a href="#press-play" style="display:inline-flex; align-items:center; gap:10px; margin-top:18px; padding:13px 22px; background:#ff2e1f; color:#fff; font-family:'Permanent Marker',cursive; font-size:18px; border-radius:12px; text-decoration:none; box-shadow:0 6px 0 rgba(0,0,0,.3); transform:rotate(-1deg);">&#9654;&#65039; Jump to the music</a>
+        <button type="button" id="heroPlayBtn" onclick="playAnthem()" style="display:inline-flex; align-items:center; gap:10px; margin-top:18px; padding:13px 22px; background:#ff2e1f; color:#fff; font-family:'Permanent Marker',cursive; font-size:18px; border:0; cursor:pointer; border-radius:12px; box-shadow:0 6px 0 rgba(0,0,0,.3); transform:rotate(-1deg);">&#9654;&#65039; Play the anthem</button>
         <div class="quick-grid">
           <div class="quick-card"><span class="label">Home Base</span><strong>Forest Dunes</strong></div>
           <div class="quick-card"><span class="label">Day 1 Mood</span><strong>Practice + Dots</strong></div>
@@ -741,7 +741,7 @@
         <span class="pill">Volume up</span>
       </div>
       <div style="position:relative; width:100%; padding-bottom:56.25%; border-radius:18px; overflow:hidden; border:1px solid var(--line); box-shadow:0 10px 30px rgba(0,0,0,.18); background:#000;">
-        <iframe style="position:absolute; inset:0; width:100%; height:100%; border:0;" src="https://www.youtube-nocookie.com/embed/XbGs_qK2PQA?rel=0&amp;playsinline=1" title="Play &quot;Rap God&quot; by Eminem" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe id="ytplayer" style="position:absolute; inset:0; width:100%; height:100%; border:0;" src="https://www.youtube-nocookie.com/embed/XbGs_qK2PQA?rel=0&amp;playsinline=1&amp;enablejsapi=1" title="Play &quot;Rap God&quot; by Eminem" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </section>
 
@@ -840,5 +840,32 @@
       Built for Michigan Trip 2026 &mdash; Golf Boyz.
     </div>
   </main>
+
+  <script>
+    // Let the hero "Play the anthem" button start the embedded player in place,
+    // without scrolling the page down to it.
+    var anthemPlayer, anthemReady = false;
+
+    function onYouTubeIframeAPIReady() {
+      anthemPlayer = new YT.Player('ytplayer', {
+        events: {
+          onReady: function () { anthemReady = true; }
+        }
+      });
+    }
+
+    function playAnthem() {
+      if (anthemReady && anthemPlayer && anthemPlayer.playVideo) {
+        anthemPlayer.playVideo();
+      }
+    }
+
+    // Load the YouTube IFrame Player API.
+    (function () {
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+    })();
+  </script>
 </body>
 </html>
