@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+# Publishes the site so it can be opened from any phone or browser at
+# https://jkalson11.github.io/forest-dunes-cup-2026/
+
+on:
+  # Re-deploy automatically whenever the page is updated on main
+  push:
+    branches:
+      - main
+  # Allow deploying by hand from the Actions tab
+  workflow_dispatch:
+
+# Permissions the deploy needs
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deploy at a time; let an in-progress run finish
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Publish the whole repo (the self-contained index.html)
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
