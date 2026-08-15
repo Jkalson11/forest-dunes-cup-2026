@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#101a20" />
+<title>The Kalson Cup 2026 — Whistling Straits</title>
+<meta name="description" content="Father &amp; Son Invitational — Whistling Straits and Blackwolf Run, Kohler, Wisconsin. 20–23 August 2026." />
+
+<!--
+  ============================================================================
+  THE KALSON CUP 2026  ·  how to edit this page
+  ----------------------------------------------------------------------------
+  1. OPEN ITEMS. Anything not yet confirmed is marked like this:
+         <span class="tbd">To confirm</span>
+     Search the file for  class="tbd"  to find every one of them at once.
+     Replace the whole span, angle brackets and all, with the real detail.
+
+  2. PHOTOGRAPHS. Drop image files into the folder  whistling-straits/img/
+     using exactly these names and they appear automatically. Until then the
+     page shows engraved artwork instead — nothing breaks if a file is missing.
+
+         img/cover.jpg              wide shot for the cover
+         img/straits.jpg            The Straits
+         img/irish.jpg              The Irish
+         img/river.jpg              Blackwolf Run — River
+         img/meadow-valleys.jpg     Blackwolf Run — Meadow Valleys
+         img/baths.jpg              The Baths
+         img/scorecard-straits.jpg  photo or scan of the official card
+         img/scorecard-irish.jpg
+         img/scorecard-river.jpg
+         img/scorecard-meadow-valleys.jpg
+
+     Landscape shots, roughly 1600px wide, look best.
+
+  3. SECTIONS are just the <section> blocks, in order. Delete a block and its
+     matching link in the top navigation to remove it.
+  ============================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:        #14191c;
+    --ink-soft:   #4c5559;
+    --ink-faint:  #7d868a;
+    --navy:       #101a20;
+    --navy-2:     #1b2b34;
+    --paper:      #f6f3ec;
+    --card:       #fbf9f4;
+    --brass:      #a8874a;
+    --brass-soft: #c8ad78;
+    --rule:       rgba(20,25,28,.13);
+    --rule-soft:  rgba(20,25,28,.07);
+    --serif: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
+    --sans:  "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-weight:400; font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+
+  .wrap{ width:min(1080px, calc(100% - 44px)); margin:0 auto; }
+  @media (max-width:640px){ .wrap{ width:calc(100% - 30px); } }
+
+  .eyebrow{
+    font-size:10.5px; font-weight:500; text-transform:uppercase;
+    letter-spacing:.26em; color:var(--brass); margin:0;
+  }
+  .lede{
+    font-family:var(--serif); font-size:clamp(19px,2.2vw,22px); font-weight:300;
+    line-height:1.55; color:var(--ink-soft); max-width:64ch; margin:0;
+  }
+  p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
+  a{ color:inherit; }
+  hr.rule-thin{ height:1px; background:var(--rule); border:0; margin:0; }
+
+  .tbd{
+    display:inline-block; font-family:var(--sans); font-size:11px; font-weight:400;
+    letter-spacing:.12em; text-transform:uppercase; color:#8a7442;
+    background:rgba(168,135,74,.10); border:1px solid rgba(168,135,74,.28);
+    border-radius:2px; padding:2px 8px 1px; vertical-align:middle; line-height:1.5;
+  }
+
+  /* ---------------------------------------------------------------- nav -- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,243,236,.9);
+    backdrop-filter:saturate(180%) blur(12px);
+    -webkit-backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--rule-soft);
+  }
+  .topbar-inner{ display:flex; align-items:center; justify-content:space-between; gap:24px; height:56px; }
+  .topbar-mark{
+    font-family:var(--serif); font-size:15px; font-weight:500; letter-spacing:.16em;
+    text-transform:uppercase; text-decoration:none; white-space:nowrap;
+  }
+  .topbar-mark span{ color:var(--brass); }
+  nav.sections{
+    display:flex; gap:24px; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;
+    mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 12px),transparent);
+  }
+  nav.sections::-webkit-scrollbar{ display:none; }
+  nav.sections a{
+    font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint);
+    text-decoration:none; white-space:nowrap; padding:4px 0;
+    border-bottom:1px solid transparent; transition:color .25s, border-color .25s;
+  }
+  nav.sections a:hover{ color:var(--ink); }
+  nav.sections a.active{ color:var(--ink); border-bottom-color:var(--brass); }
+  @media (max-width:980px){ .topbar-mark{ display:none; } nav.sections{ width:100%; } }
+
+  /* -------------------------------------------------------------- cover -- */
+  .cover{ position:relative; background:var(--navy); color:#f3efe6; overflow:hidden; isolation:isolate; }
+  .cover-art{ position:absolute; inset:0; z-index:0; }
+  .cover-art svg{ width:100%; height:100%; display:block; }
+  .cover-photo{
+    position:absolute; inset:0; z-index:1; width:100%; height:100%;
+    object-fit:cover; opacity:.5; filter:grayscale(.25) contrast(1.03);
+  }
+  .cover::after{
+    content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.06), transparent 60%),
+               linear-gradient(180deg, rgba(16,26,32,.42) 0%, rgba(16,26,32,.28) 45%, rgba(10,16,20,.72) 100%);
+  }
+  .cover-inner{ position:relative; z-index:3; padding:clamp(52px,8.5vw,100px) 0 clamp(38px,6vw,62px); text-align:center; }
+  .cover-frame{ border:1px solid rgba(200,173,120,.34); padding:clamp(28px,5.5vw,60px) clamp(18px,5vw,54px); }
+  .crest{ margin:0 auto 24px; display:block; }
+  .cover .eyebrow{ color:var(--brass-soft); }
+
+  h1{
+    font-family:var(--serif); font-weight:400; font-size:clamp(42px,8.6vw,90px);
+    line-height:1; letter-spacing:.02em; margin:16px 0 0; color:#faf7f0;
+  }
+  .cover-sub{
+    font-family:var(--serif); font-style:italic; font-weight:300;
+    font-size:clamp(17px,2.5vw,24px); color:rgba(243,239,230,.78); margin:14px 0 0;
+  }
+  .cover-divider{ display:flex; align-items:center; justify-content:center; gap:14px; margin:28px auto 24px; max-width:280px; }
+  .cover-divider .line{ flex:1; height:1px; background:rgba(200,173,120,.42); }
+  .cover-divider .dot{ width:4px; height:4px; transform:rotate(45deg); background:var(--brass-soft); }
+  .cover-meta{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:14px 44px;
+    font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:rgba(243,239,230,.66);
+  }
+  .cover-meta b{
+    display:block; font-weight:400; color:#f6f2e9; letter-spacing:.14em;
+    margin-top:5px; font-size:12.5px;
+  }
+
+  /* ------------------------------------------------------------- anthem -- */
+  .anthem{
+    display:flex; align-items:center; gap:16px;
+    width:min(340px, 100%); margin:30px auto 0; padding-top:22px;
+    border-top:1px solid rgba(200,173,120,.28); text-align:left;
+  }
+  .anthem-btn{
+    flex:0 0 auto; width:42px; height:42px; padding:0; cursor:pointer;
+    display:inline-flex; align-items:center; justify-content:center;
+    background:transparent; color:var(--brass-soft);
+    border:1px solid rgba(200,173,120,.5); border-radius:50%;
+    transition:background .3s, color .3s, border-color .3s;
+  }
+  .anthem-btn:hover{ background:rgba(200,173,120,.14); color:#f2e7d0; border-color:rgba(200,173,120,.8); }
+  .anthem-btn:focus-visible{ outline:1px solid var(--brass-soft); outline-offset:3px; }
+  .anthem-btn .ic-play{ margin-left:3px; }
+  .anthem-btn .ic-pause{ display:none; }
+  .anthem.playing .ic-play{ display:none; }
+  .anthem.playing .ic-pause{ display:block; }
+
+  .anthem-meta{ flex:1 1 auto; min-width:0; }
+  .anthem-label{
+    display:block; font-size:9.5px; letter-spacing:.26em; text-transform:uppercase;
+    color:rgba(200,173,120,.85);
+  }
+  .anthem-track{
+    display:block; margin-top:3px; font-family:var(--serif); font-size:16px;
+    color:rgba(246,242,233,.9); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .anthem-line{
+    display:block; margin-top:9px; height:1px; background:rgba(243,239,230,.2); overflow:hidden;
+  }
+  .anthem-line i{
+    display:block; width:0; height:100%; background:var(--brass-soft);
+    transition:width .25s linear;
+  }
+  .anthem-fallback{
+    margin:26px auto 0; padding-top:20px; width:min(340px,100%);
+    border-top:1px solid rgba(200,173,120,.28);
+    font-size:10.5px; letter-spacing:.2em; text-transform:uppercase;
+    color:rgba(243,239,230,.55);
+  }
+  .anthem-fallback em{ font-style:normal; color:rgba(246,242,233,.82); }
+
+  .glance{ background:var(--navy-2); color:#eee9de; border-top:1px solid rgba(200,173,120,.2); }
+  .glance-grid{ display:grid; grid-template-columns:repeat(4,1fr); }
+  .glance-cell{ padding:20px 22px; border-left:1px solid rgba(243,239,230,.1); }
+  .glance-cell:first-child{ border-left:0; }
+  .glance-cell .k{ font-size:9.5px; letter-spacing:.24em; text-transform:uppercase; color:rgba(238,233,222,.55); }
+  .glance-cell .v{ font-family:var(--serif); font-size:21px; margin-top:5px; line-height:1.2; }
+  @media (max-width:780px){
+    .glance-grid{ grid-template-columns:repeat(2,1fr); }
+    .glance-cell:nth-child(3){ border-left:0; }
+    .glance-cell:nth-child(n+3){ border-top:1px solid rgba(243,239,230,.1); }
+  }
+
+  /* ----------------------------------------------------------- sections -- */
+  main{ counter-reset:sec; }
+  section{ padding:clamp(54px,7.5vw,94px) 0; border-top:1px solid var(--rule); }
+  section:first-of-type{ border-top:0; }
+
+  .sec-head{ display:grid; grid-template-columns:auto 1fr; gap:0 22px; align-items:baseline; margin-bottom:clamp(26px,4vw,42px); }
+  .sec-num{ counter-increment:sec; font-family:var(--serif); font-size:14px; letter-spacing:.16em; color:var(--brass); padding-top:6px; }
+  .sec-num::before{ content:counter(sec, upper-roman); }
+  h2{ font-family:var(--serif); font-weight:400; font-size:clamp(30px,4.8vw,45px); line-height:1.08; margin:0; }
+  .sec-head .lede{ grid-column:2; margin-top:13px; }
+  @media (max-width:560px){
+    .sec-head{ grid-template-columns:1fr; gap:8px; }
+    .sec-num{ padding-top:0; }
+    .sec-head .lede{ grid-column:1; }
+  }
+
+  /* ---------------------------------------------------------- itinerary -- */
+  .day{ margin-top:46px; }
+  .day:first-of-type{ margin-top:0; }
+  .day-head{ display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; padding-bottom:13px; border-bottom:1px solid var(--ink); }
+  .day-head .n{ font-size:10.5px; letter-spacing:.24em; text-transform:uppercase; color:var(--brass); }
+  .day-head h3{ font-family:var(--serif); font-weight:400; font-size:clamp(24px,3.4vw,32px); margin:0; line-height:1.1; flex:1 1 auto; }
+  .day-head .date{ font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); }
+
+  .entry{
+    display:grid; grid-template-columns:104px 1fr 200px; gap:0 26px;
+    padding:18px 0; border-bottom:1px solid var(--rule-soft); align-items:baseline;
+  }
+  .entry:last-child{ border-bottom:0; }
+  .entry .time{ font-size:13px; letter-spacing:.09em; font-variant-numeric:tabular-nums; white-space:nowrap; padding-top:2px; }
+  .entry .what h4{ font-family:var(--serif); font-weight:500; font-size:20px; margin:0 0 4px; line-height:1.25; }
+  .entry .what p{ font-size:14.5px; color:var(--ink-soft); margin:0; max-width:56ch; }
+  .entry .where{ font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); text-align:right; padding-top:5px; }
+  .entry .where em{ display:block; font-style:normal; letter-spacing:.05em; text-transform:none; font-size:13px; color:var(--ink-soft); margin-top:3px; }
+  .entry.feature{ background:linear-gradient(90deg, rgba(168,135,74,.06), transparent 72%); }
+  .entry.feature .what h4{ font-size:23px; }
+  .entry.feature .time{ color:var(--brass); font-weight:500; }
+  .ref{ display:inline-block; margin-top:6px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+  .ref b{ color:var(--ink-soft); font-weight:400; letter-spacing:.06em; }
+
+  @media (max-width:820px){
+    .entry{ grid-template-columns:88px 1fr; gap:0 18px; }
+    .entry .where{ grid-column:2; text-align:left; padding-top:8px; }
+  }
+  @media (max-width:480px){
+    .entry{ grid-template-columns:1fr; }
+    .entry .time{ color:var(--brass); letter-spacing:.16em; font-size:12px; margin-bottom:5px; }
+    .entry .where{ grid-column:1; }
+  }
+
+  /* -------------------------------------------------------------- cards -- */
+  .grid{ display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); }
+  .grid-2{ grid-template-columns:repeat(2,1fr); }
+  .grid-3{ grid-template-columns:repeat(3,1fr); }
+  .grid-4{ grid-template-columns:repeat(4,1fr); }
+  .grid > .cell{ background:var(--card); padding:clamp(20px,2.8vw,28px); }
+  @media (max-width:900px){ .grid-3,.grid-4{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px){ .grid-2,.grid-3,.grid-4{ grid-template-columns:1fr; } }
+
+  .cell h3{ font-family:var(--serif); font-weight:500; font-size:23px; margin:0 0 3px; line-height:1.2; }
+  .cell h3 + .sub{ font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--brass); margin:0 0 13px; }
+  .cell p{ font-size:14.5px; color:var(--ink-soft); }
+
+  .spec{ margin-top:15px; border-top:1px solid var(--rule-soft); padding-top:11px; }
+  .spec div{ display:flex; justify-content:space-between; gap:16px; padding:5px 0; font-size:12.5px; color:var(--ink-soft); }
+  .spec div span:last-child{ color:var(--ink); text-align:right; }
+  .spec div + div{ border-top:1px solid var(--rule-soft); }
+
+  /* --------------------------------------------------------- photo slot -- */
+  .shot{
+    position:relative; width:100%; aspect-ratio:16/9; overflow:hidden;
+    background:var(--navy); margin:0 0 18px;
+  }
+  .shot svg{ position:absolute; inset:0; width:100%; height:100%; display:block; }
+  .shot img{
+    position:absolute; inset:0; z-index:1; width:100%; height:100%;
+    object-fit:cover; display:block;
+  }
+  .shot::after{
+    content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);
+  }
+  .cell.has-shot{ padding:0; }
+  .cell.has-shot .cell-body{ padding:clamp(20px,2.8vw,28px); padding-top:0; }
+  .cell.has-shot .cell-body h3{ margin-top:0; }
+
+  /* ---------------------------------------------------------- the field -- */
+  .player{ text-align:center; padding:clamp(24px,3.2vw,34px) 20px; }
+  .player .role{ font-size:9.5px; letter-spacing:.26em; text-transform:uppercase; color:var(--brass); }
+  .player .name{ font-family:var(--serif); font-size:clamp(25px,3.1vw,31px); font-weight:400; margin:8px 0 0; line-height:1.12; }
+  .player .hcp{ margin-top:15px; padding-top:13px; border-top:1px solid var(--rule-soft); display:flex; justify-content:center; gap:30px; }
+  .player .hcp div{ font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint); }
+  .player .hcp b{ display:block; font-family:var(--serif); font-size:25px; font-weight:400; letter-spacing:0; color:var(--ink); margin-top:4px; }
+  .player .note{ margin-top:14px; font-family:var(--serif); font-style:italic; font-size:15.5px; color:var(--ink-soft); line-height:1.4; }
+
+  /* ------------------------------------------------------------- tables -- */
+  .table-wrap{ overflow-x:auto; }
+  table{ width:100%; border-collapse:collapse; font-size:14.5px; }
+  thead th{
+    text-align:left; font-weight:500; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--ink-faint); padding:0 16px 10px 0; border-bottom:1px solid var(--ink); white-space:nowrap;
+  }
+  tbody td{ padding:13px 16px 13px 0; border-bottom:1px solid var(--rule-soft); vertical-align:top; color:var(--ink-soft); }
+  tbody td:first-child{ color:var(--ink); }
+  tbody tr:last-child td{ border-bottom:0; }
+  th:last-child, td:last-child{ padding-right:0; }
+  .num{ font-variant-numeric:tabular-nums; }
+  .serif-num{ font-family:var(--serif); font-size:19px; color:var(--ink); }
+
+  /* scorecard */
+  .card-title{
+    display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    margin:0 0 12px; padding-bottom:10px; border-bottom:1px solid var(--ink);
+  }
+  .card-title h3{ font-family:var(--serif); font-weight:400; font-size:27px; margin:0; }
+  .card-title span{ font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint); }
+  table.card{ font-size:13.5px; }
+  table.card th, table.card td{ padding:9px 12px 9px 0; }
+  table.card td.hole{ font-variant-numeric:tabular-nums; color:var(--brass); font-family:var(--serif); font-size:16px; width:42px; }
+  table.card td.name{ color:var(--ink); font-family:var(--serif); font-size:17px; }
+  table.card td.par, table.card td.yds{ font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap; }
+  table.card th.par, table.card th.yds{ text-align:right; }
+  table.card tr.total td{
+    border-top:1px solid var(--ink); border-bottom:0; padding-top:11px;
+    color:var(--ink); font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+  }
+  table.card tr.total td.par, table.card tr.total td.yds{
+    font-family:var(--serif); font-size:19px; letter-spacing:0; text-transform:none;
+  }
+  .card-cols{ display:grid; grid-template-columns:1fr 1fr; gap:0 46px; }
+  @media (max-width:760px){ .card-cols{ grid-template-columns:1fr; gap:34px; } }
+
+  /* --------------------------------------------------------------- misc -- */
+  .notes{ list-style:none; margin:0; padding:0; counter-reset:note; }
+  .notes li{
+    display:grid; grid-template-columns:26px 1fr; gap:0 14px; padding:14px 0;
+    border-bottom:1px solid var(--rule-soft); font-size:14.5px; color:var(--ink-soft);
+  }
+  .notes li:last-child{ border-bottom:0; }
+  .notes li::before{
+    content:counter(note, decimal-leading-zero); counter-increment:note;
+    font-family:var(--serif); font-size:13px; color:var(--brass); letter-spacing:.06em;
+  }
+  .notes li b{ color:var(--ink); font-weight:500; }
+
+  .open-items{ background:var(--card); border:1px solid var(--rule); padding:clamp(22px,3vw,32px); }
+  .open-items h3{ font-family:var(--serif); font-weight:400; font-size:24px; margin:0 0 4px; }
+  .open-items .sub{ font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--brass); margin:0 0 16px; }
+  .open-items ul{ list-style:none; margin:0; padding:0; }
+  .open-items li{
+    padding:11px 0 11px 22px; border-bottom:1px solid var(--rule-soft);
+    font-size:14.5px; color:var(--ink-soft); position:relative;
+  }
+  .open-items li:last-child{ border-bottom:0; }
+  .open-items li::before{
+    content:""; position:absolute; left:2px; top:19px; width:5px; height:5px;
+    transform:rotate(45deg); border:1px solid var(--brass);
+  }
+  .open-items li b{ color:var(--ink); font-weight:500; }
+
+  .quote{ text-align:center; padding:clamp(40px,6vw,66px) 0; }
+  .quote blockquote{
+    font-family:var(--serif); font-style:italic; font-weight:300;
+    font-size:clamp(23px,3.6vw,34px); line-height:1.35; color:var(--ink);
+    margin:0 auto; max-width:26ch;
+  }
+  .quote cite{ display:block; margin-top:20px; font-style:normal; font-size:10.5px; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-faint); }
+
+  footer{ background:var(--navy); color:rgba(243,239,230,.7); text-align:center; padding:clamp(50px,7vw,78px) 0; }
+  footer .crest{ margin-bottom:20px; }
+  footer .f-title{ font-family:var(--serif); font-size:clamp(22px,3vw,28px); color:#f6f2e9; margin:0; }
+  footer .f-sub{ font-size:10.5px; letter-spacing:.24em; text-transform:uppercase; margin:13px 0 0; color:rgba(243,239,230,.5); }
+
+  .reveal{ opacity:0; transform:translateY(14px); }
+  .reveal.in{ opacity:1; transform:none; transition:opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; } }
+
+  @media print{
+    .topbar{ display:none; }
+    body{ background:#fff; font-size:10.5pt; }
+    .cover, .glance, footer{ background:#fff !important; color:#000 !important; }
+    .cover-art, .cover-photo, .cover::after, .anthem{ display:none; }
+    .anthem-fallback{ color:#444 !important; border-color:#ddd !important; }
+    .cover-frame{ border-color:#bbb; }
+    h1, .cover-sub, .cover-meta b, .glance-cell .v, footer .f-title{ color:#000 !important; }
+    .cover-meta, .glance-cell .k, footer .f-sub{ color:#444 !important; }
+    .glance-cell{ border-color:#ddd !important; }
+    section{ padding:20pt 0; break-inside:avoid; }
+    .day, .cell, .entry, .open-items{ break-inside:avoid; }
+    .reveal{ opacity:1 !important; transform:none !important; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ===================================================================== -->
+<!--  COVER                                                                -->
+<!-- ===================================================================== -->
+
+<header class="cover">
+  <div class="cover-art" aria-hidden="true">
+    <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax slice" role="presentation">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#16242c"/><stop offset="52%" stop-color="#121d24"/><stop offset="100%" stop-color="#0c141a"/>
+        </linearGradient>
+        <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1d323d"/><stop offset="100%" stop-color="#132029"/>
+        </linearGradient>
+        <linearGradient id="dune" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1a2830"/><stop offset="100%" stop-color="#0e171d"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="640" fill="url(#sky)"/>
+      <ellipse cx="1040" cy="360" rx="520" ry="120" fill="#2a3f49" opacity=".45"/>
+      <rect y="360" width="1440" height="122" fill="url(#lake)"/>
+      <g opacity=".28" stroke="#7f9aa6" stroke-width="1" fill="none">
+        <path d="M0 380 H1440"/><path d="M0 400 H1440"/><path d="M0 422 H1440"/><path d="M0 446 H1440"/><path d="M0 472 H1440"/>
+      </g>
+      <path d="M0 380 C 180 338, 330 364, 470 348 C 620 330, 700 366, 840 354 C 980 342, 1120 364, 1440 344 L1440 640 L0 640 Z" fill="url(#dune)" opacity=".9"/>
+      <path d="M0 462 C 200 418, 340 452, 520 434 C 700 416, 820 458, 1000 442 C 1180 426, 1300 456, 1440 434 L1440 640 L0 640 Z" fill="#0d151b"/>
+      <g stroke="#26363f" stroke-width="1.1" stroke-linecap="round" opacity=".85">
+        <path d="M60 574 q6 -30 2 -52"/><path d="M78 580 q-5 -28 3 -48"/><path d="M96 570 q8 -26 4 -44"/>
+        <path d="M1300 580 q6 -30 1 -50"/><path d="M1322 586 q-6 -28 2 -46"/><path d="M1344 574 q8 -26 3 -42"/>
+        <path d="M640 610 q6 -26 2 -44"/><path d="M660 614 q-5 -24 3 -40"/><path d="M682 606 q7 -22 3 -36"/>
+      </g>
+      <g opacity=".9">
+        <line x1="1128" y1="442" x2="1128" y2="396" stroke="#c8ad78" stroke-width="1.4"/>
+        <path d="M1128 396 L1156 404 L1128 412 Z" fill="#a8874a"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Drop img/cover.jpg into the folder and it appears here automatically -->
+  <img class="cover-photo" src="img/cover.jpg" alt="" onerror="this.remove()">
+
+  <div class="cover-inner wrap">
+    <div class="cover-frame">
+
+      <svg class="crest" width="66" height="66" viewBox="0 0 66 66" aria-hidden="true">
+        <circle cx="33" cy="33" r="31.5" fill="none" stroke="rgba(200,173,120,.55)" stroke-width="1"/>
+        <circle cx="33" cy="33" r="27" fill="none" stroke="rgba(200,173,120,.28)" stroke-width="1"/>
+        <path d="M22 44 C 27 36, 39 36, 44 44" fill="none" stroke="#c8ad78" stroke-width="1.1"/>
+        <line x1="33" y1="20" x2="33" y2="40" stroke="#c8ad78" stroke-width="1.2"/>
+        <path d="M33 20 L45 24.5 L33 29 Z" fill="#a8874a"/>
+        <circle cx="33" cy="44" r="1.6" fill="#c8ad78"/>
+      </svg>
+
+      <p class="eyebrow">Father &amp; Son&nbsp;&nbsp;·&nbsp;&nbsp;Annual Invitational</p>
+
+      <h1>The Kalson Cup</h1>
+      <p class="cover-sub">Whistling Straits &amp; Blackwolf Run &middot; Kohler, Wisconsin</p>
+
+      <div class="cover-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+
+      <div class="cover-meta">
+        <div>Dates<b>20&ndash;23 August 2026</b></div>
+        <div>Edition<b><span class="tbd">No.</span></b></div>
+        <div>Field<b>Four Players</b></div>
+        <div>Rounds<b>Six</b></div>
+        <div>Home<b>The Carriage House</b></div>
+      </div>
+
+      <!-- ---- The anthem. Drop audio/swingtown.mp3 in and this comes alive. ---- -->
+      <div class="anthem" id="anthemBar" hidden>
+        <button class="anthem-btn" id="anthemBtn" type="button" aria-label="Play the anthem">
+          <svg class="ic-play" width="15" height="17" viewBox="0 0 15 17" aria-hidden="true">
+            <path d="M1 1 L14 8.5 L1 16 Z" fill="currentColor"/>
+          </svg>
+          <svg class="ic-pause" width="13" height="16" viewBox="0 0 13 16" aria-hidden="true">
+            <rect x="1" y="0" width="4" height="16" fill="currentColor"/>
+            <rect x="8" y="0" width="4" height="16" fill="currentColor"/>
+          </svg>
+        </button>
+        <div class="anthem-meta">
+          <span class="anthem-label">The Anthem</span>
+          <span class="anthem-track">Swingtown &middot; Steve Miller Band</span>
+          <span class="anthem-line"><i id="anthemFill"></i></span>
+        </div>
+      </div>
+
+      <p class="anthem-fallback" id="anthemFallback" hidden>
+        Anthem &mdash; <em>Swingtown</em>, Steve Miller Band
+      </p>
+
+      <audio id="anthemAudio" preload="metadata" src="audio/swingtown.mp3"></audio>
+
+    </div>
+  </div>
+</header>
+
+<div class="glance">
+  <div class="wrap">
+    <div class="glance-grid">
+      <div class="glance-cell"><div class="k">Arrival</div><div class="v">Thursday the 20th</div></div>
+      <div class="glance-cell"><div class="k">The Straits</div><div class="v">Saturday, 12:12</div></div>
+      <div class="glance-cell"><div class="k">Courses</div><div class="v">Five, all Dye</div></div>
+      <div class="glance-cell"><div class="k">Closing</div><div class="v">The Baths, Sunday</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="topbar-mark" href="#top">Kalson <span>&middot;</span> Cup</a>
+    <nav class="sections" aria-label="Sections">
+      <a href="#field">The Field</a>
+      <a href="#itinerary">Itinerary</a>
+      <a href="#courses">The Courses</a>
+      <a href="#cards">Scorecards</a>
+      <a href="#matches">The Matches</a>
+      <a href="#table">The Table</a>
+      <a href="#stay">Stay &amp; Travel</a>
+      <a href="#local">Local Knowledge</a>
+      <a href="#record">The Record</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap" id="top">
+
+  <!-- =================================================================== -->
+  <!--  I. THE FIELD                                                       -->
+  <!-- =================================================================== -->
+
+  <section id="field" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>The Field</h2>
+        <p class="lede">Four players. Two of them share a name, one of them shares everything else, and all four have opinions about the handicaps.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-4">
+      <div class="cell player">
+        <div class="role">The Father</div>
+        <p class="name">Michael Kalson</p>
+        <div class="hcp">
+          <div>Index<b><span class="tbd">—</span></b></div>
+          <div>Cups<b><span class="tbd">—</span></b></div>
+        </div>
+        <p class="note">Founder, organiser, and the reason the rest of us are here.</p>
+      </div>
+
+      <div class="cell player">
+        <div class="role">The Son</div>
+        <p class="name">Josh Kalson</p>
+        <div class="hcp">
+          <div>Index<b>14.5</b></div>
+          <div>Cups<b><span class="tbd">—</span></b></div>
+        </div>
+        <p class="note">Full medical report on the first tee. Plays well anyway.</p>
+      </div>
+
+      <div class="cell player">
+        <div class="role">The Field</div>
+        <p class="name">Matt Reiner</p>
+        <div class="hcp">
+          <div>Index<b><span class="tbd">—</span></b></div>
+          <div>Cups<b><span class="tbd">—</span></b></div>
+        </div>
+        <p class="note"><span class="tbd">A line about his game</span></p>
+      </div>
+
+      <div class="cell player">
+        <div class="role">Family, Unofficially</div>
+        <p class="name">Jon Vandegrift</p>
+        <div class="hcp">
+          <div>Index<b>10.9</b></div>
+          <div>Cups<b><span class="tbd">—</span></b></div>
+        </div>
+        <p class="note">Not related. Twenty years of evidence to the contrary.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+  <!--  II. ITINERARY                                                      -->
+  <!-- =================================================================== -->
+
+  <section id="itinerary" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>The Itinerary</h2>
+        <p class="lede">Six rounds across four days, two tables booked, and one afternoon that settles it. All times Central.</p>
+      </div>
+    </div>
+
+    <!-- ------------------------------ THURSDAY ------------------------- -->
+    <div class="day">
+      <div class="day-head">
+        <span class="n">Day One</span>
+        <h3>Arrival &amp; The River</h3>
+        <span class="date">Thursday, 20 August</span>
+      </div>
+
+      <div class="entry">
+        <div class="time"><span class="tbd">Arrival</span></div>
+        <div class="what">
+          <h4>Into Kohler</h4>
+          <p>Roughly an hour north of Milwaukee Mitchell. The resort has asked for an estimated arrival time &mdash; worth sending back so the welcome is ready.</p>
+        </div>
+        <div class="where">Lodging<em>The Carriage House</em></div>
+      </div>
+
+      <div class="entry feature">
+        <div class="time">1:43 PM</div>
+        <div class="what">
+          <h4>The River</h4>
+          <p>Blackwolf Run&rsquo;s championship eighteen along the Sheboygan. Two-time host of the U.S. Women&rsquo;s Open, and a proper opening test before the lake gets involved.</p>
+        </div>
+        <div class="where">Course<em>Blackwolf Run</em></div>
+      </div>
+
+      <div class="entry">
+        <div class="time">7:30 PM</div>
+        <div class="what">
+          <h4>Dinner &mdash; Whistling Straits</h4>
+          <p>Table for four, overlooking the lake. Allow twenty minutes from Blackwolf Run; it is a genuine drive between the two properties, not a walk across the car park.</p>
+          <span class="ref">Confirmation <b>BYWPJ3VT</b></span>
+        </div>
+        <div class="where">Dinner<em>Whistling Straits</em></div>
+      </div>
+    </div>
+
+    <!-- ------------------------------ FRIDAY --------------------------- -->
+    <div class="day">
+      <div class="day-head">
+        <span class="n">Day Two</span>
+        <h3>The Irish, Twice</h3>
+        <span class="date">Friday, 21 August</span>
+      </div>
+
+      <div class="entry feature">
+        <div class="time">8:31 AM</div>
+        <div class="what">
+          <h4>The Irish &mdash; Morning</h4>
+          <p>Caddies on the bag, walking. Meet at the caddie yard thirty minutes prior.</p>
+        </div>
+        <div class="where">Course<em>Whistling Straits</em></div>
+      </div>
+
+      <div class="entry">
+        <div class="time">Midday</div>
+        <div class="what">
+          <h4>Lunch between rounds</h4>
+          <p>Roughly five hours between tees. Eat properly, sit down, and stay off your feet &mdash; thirty-six on foot is a long day and the second nine of the afternoon is where it shows.</p>
+        </div>
+        <div class="where">Clubhouse<em>Whistling Straits</em></div>
+      </div>
+
+      <div class="entry feature">
+        <div class="time">3:24 PM</div>
+        <div class="what">
+          <h4>The Irish &mdash; Afternoon</h4>
+          <p>The same eighteen in a different wind, which at Kohler means a different golf course. Sunset is close to eight; the pace needs watching on the back nine.</p>
+        </div>
+        <div class="where">Course<em>Whistling Straits</em></div>
+      </div>
+
+      <div class="entry">
+        <div class="time">Evening</div>
+        <div class="what">
+          <h4>No reservation, by design</h4>
+          <p>Back, showered, and walk into whatever is open. Horse &amp; Plow for the tavern, Cucina for something heavier, Craverie if nobody can face a menu.</p>
+        </div>
+        <div class="where">Village<em>Kohler</em></div>
+      </div>
+    </div>
+
+    <!-- ------------------------------ SATURDAY ------------------------- -->
+    <div class="day">
+      <div class="day-head">
+        <span class="n">Day Three</span>
+        <h3>The Straits</h3>
+        <span class="date">Saturday, 22 August</span>
+      </div>
+
+      <div class="entry">
+        <div class="time">10:30 AM<br>11:00 AM</div>
+        <div class="what">
+          <h4>Lessons &mdash; four, in pairs</h4>
+          <p>Two at half past, two on the hour, included in the hotel package. Confirm where they are held: if the academy is at Blackwolf Run rather than the Straits practice ground, the eleven o&rsquo;clock pair is very tight against the tee time.</p>
+        </div>
+        <div class="where">Instruction<em>Kohler Golf Academy</em></div>
+      </div>
+
+      <div class="entry feature">
+        <div class="time">12:12 PM</div>
+        <div class="what">
+          <h4>The Straits</h4>
+          <p>The one the trip is built around. Eight holes on Lake Michigan, something close to a thousand bunkers, no carts and no exceptions. Roughly four and a half hours on foot.</p>
+        </div>
+        <div class="where">Course<em>Whistling Straits</em></div>
+      </div>
+
+      <div class="entry">
+        <div class="time">7:30 PM</div>
+        <div class="what">
+          <h4>Dinner &mdash; Blackwolf Run</h4>
+          <p>Table for four. Timber, stone, and a view down the river valley. Comfortable landing after the biggest day of the trip.</p>
+          <span class="ref">Confirmation <b>BA4HQ4FV</b></span>
+        </div>
+        <div class="where">Dinner<em>Blackwolf Run</em></div>
+      </div>
+    </div>
+
+    <!-- ------------------------------ SUNDAY --------------------------- -->
+    <div class="day">
+      <div class="day-head">
+        <span class="n">Day Four</span>
+        <h3>Meadow Valleys &amp; The Baths</h3>
+        <span class="date">Sunday, 23 August</span>
+      </div>
+
+      <div class="entry feature">
+        <div class="time">9:49 AM</div>
+        <div class="what">
+          <h4>Meadow Valleys</h4>
+          <p>The friendlier half of Blackwolf Run, and carts are available &mdash; which after three days on foot is not nothing. Whatever the Cup still owes, it gets paid here.</p>
+        </div>
+        <div class="where">Course<em>Blackwolf Run</em></div>
+      </div>
+
+      <div class="entry">
+        <div class="time">Afternoon</div>
+        <div class="what">
+          <h4>Check out &amp; regroup</h4>
+          <p>The room is booked for three nights, so Sunday is a check-out day with golf still to play. Ask the front desk to hold the bags and keep a locker &mdash; or add the fourth night if the flights allow.</p>
+        </div>
+        <div class="where">Lodging<em>The Carriage House</em></div>
+      </div>
+
+      <div class="entry feature">
+        <div class="time">4:00 PM</div>
+        <div class="what">
+          <h4>The Baths</h4>
+          <p>Ten par threes to close the week, in the evening light, with the trophy already decided or very much not. Shoes optional in spirit if not in the rules.</p>
+        </div>
+        <div class="where">Short course<em>Blackwolf Run</em></div>
+      </div>
+
+      <div class="entry">
+        <div class="time"><span class="tbd">Departure</span></div>
+        <div class="what">
+          <h4>The presentation, then home</h4>
+          <p>The Baths should finish near six. Anything earlier than a late flight out of Milwaukee will not work &mdash; worth checking before anyone books.</p>
+        </div>
+        <div class="where">Airport<em>MKE</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+  <!--  III. THE COURSES                                                   -->
+  <!-- =================================================================== -->
+
+  <section id="courses" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>The Courses</h2>
+        <p class="lede">Five Pete Dye designs within ten miles of one another. Two on the lake, three on the river.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+
+      <!-- ---- The Straits ---- -->
+      <div class="cell has-shot">
+        <div class="shot">
+          <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="640" height="360" fill="#132029"/>
+            <rect y="120" width="640" height="90" fill="#1d323d"/>
+            <g opacity=".3" stroke="#7f9aa6" stroke-width="1" fill="none">
+              <path d="M0 140 H640"/><path d="M0 158 H640"/><path d="M0 178 H640"/><path d="M0 198 H640"/>
+            </g>
+            <path d="M0 210 C 120 186, 250 214, 380 200 C 490 188, 560 208, 640 196 L640 360 L0 360 Z" fill="#16252d"/>
+            <path d="M0 252 C 140 226, 260 258, 400 240 C 520 226, 580 250, 640 238 L640 360 L0 360 Z" fill="#0e171d"/>
+            <ellipse cx="180" cy="300" rx="86" ry="20" fill="#1b2b34"/>
+            <ellipse cx="430" cy="326" rx="110" ry="22" fill="#1b2b34"/>
+            <ellipse cx="300" cy="278" rx="52" ry="12" fill="#1b2b34"/>
+            <g><line x1="512" y1="240" x2="512" y2="200" stroke="#c8ad78" stroke-width="1.4"/><path d="M512 200 L538 207 L512 214 Z" fill="#a8874a"/></g>
+          </svg>
+          <img src="img/straits.jpg" alt="The Straits Course" onerror="this.remove()">
+        </div>
+        <div class="cell-body">
+          <h3>The Straits</h3>
+          <p class="sub">Whistling Straits &middot; Pete Dye, 1998</p>
+          <p>Two miles of Lake Michigan shoreline rebuilt to look as though the glacier left it that way. Eight holes run along the water, the bunkering is uncountable by design, and the wind decides which golf course you get that morning.</p>
+          <div class="spec">
+            <div><span>Par</span><span>72</span></div>
+            <div><span>Back tees</span><span>7,452 yards</span></div>
+            <div><span>Host of</span><span>PGA &times;3 &middot; Ryder Cup 2021</span></div>
+            <div><span>Play</span><span>Walking, caddie required</span></div>
+            <div><span>Our tee</span><span class="tbd">To confirm</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- The Irish ---- -->
+      <div class="cell has-shot">
+        <div class="shot">
+          <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="640" height="360" fill="#16242c"/>
+            <path d="M0 160 C 130 132, 250 168, 380 148 C 490 132, 560 158, 640 142 L640 360 L0 360 Z" fill="#1a2c2a"/>
+            <path d="M0 216 C 150 190, 270 224, 410 204 C 520 188, 580 212, 640 200 L640 360 L0 360 Z" fill="#12211f"/>
+            <path d="M0 288 C 160 266, 300 296, 440 280 C 540 268, 590 286, 640 278 L640 360 L0 360 Z" fill="#0d1815"/>
+            <path d="M90 360 C 150 300, 250 296, 320 264 C 390 232, 470 236, 540 214" fill="none" stroke="#22403a" stroke-width="9" opacity=".8"/>
+            <g stroke="#2b4a42" stroke-width="1.2" stroke-linecap="round" opacity=".9">
+              <path d="M60 330 q6 -26 2 -44"/><path d="M78 336 q-5 -24 3 -40"/><path d="M96 328 q8 -22 4 -36"/>
+              <path d="M560 320 q6 -26 1 -42"/><path d="M580 326 q-6 -24 2 -38"/>
+            </g>
+            <g><line x1="430" y1="238" x2="430" y2="200" stroke="#c8ad78" stroke-width="1.4"/><path d="M430 200 L455 207 L430 214 Z" fill="#a8874a"/></g>
+          </svg>
+          <img src="img/irish.jpg" alt="The Irish Course" onerror="this.remove()">
+        </div>
+        <div class="cell-body">
+          <h3>The Irish</h3>
+          <p class="sub">Whistling Straits &middot; Pete Dye, 2000</p>
+          <p>The inland sibling, and no consolation prize. Four streams, tall dunes, and fescue with its own weather system. A shade kinder off the tee than the Straits, considerably less so once you have left the short grass.</p>
+          <div class="spec">
+            <div><span>Par</span><span>72</span></div>
+            <div><span>Championship</span><span>7,201 yards</span></div>
+            <div><span>We play it</span><span>Twice, Friday</span></div>
+            <div><span>Play</span><span>Walking, caddie required</span></div>
+            <div><span>Our tee</span><span class="tbd">To confirm</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- The River ---- -->
+      <div class="cell has-shot">
+        <div class="shot">
+          <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="640" height="360" fill="#152420"/>
+            <path d="M0 120 C 120 108, 220 132, 330 126 C 450 120, 540 138, 640 128 L640 360 L0 360 Z" fill="#1a2f28"/>
+            <path d="M-20 300 C 90 262, 170 292, 270 256 C 380 216, 450 250, 560 214 C 600 200, 620 196, 660 188 L660 210 C 620 218, 600 222, 562 236 C 456 274, 388 240, 280 280 C 182 316, 100 288, -20 322 Z" fill="#243f4a"/>
+            <path d="M-20 300 C 90 262, 170 292, 270 256 C 380 216, 450 250, 560 214 C 600 200, 620 196, 660 188" fill="none" stroke="#33566246" stroke-width="2"/>
+            <g fill="#0f1d18" opacity=".95">
+              <ellipse cx="70" cy="150" rx="34" ry="26"/><ellipse cx="128" cy="136" rx="26" ry="20"/>
+              <ellipse cx="556" cy="146" rx="34" ry="26"/><ellipse cx="500" cy="132" rx="24" ry="18"/>
+              <ellipse cx="318" cy="128" rx="28" ry="21"/>
+            </g>
+            <ellipse cx="400" cy="322" rx="74" ry="16" fill="#1e352d"/>
+            <g><line x1="404" y1="322" x2="404" y2="284" stroke="#c8ad78" stroke-width="1.4"/><path d="M404 284 L429 291 L404 298 Z" fill="#a8874a"/></g>
+          </svg>
+          <img src="img/river.jpg" alt="Blackwolf Run — River Course" onerror="this.remove()">
+        </div>
+        <div class="cell-body">
+          <h3>The River</h3>
+          <p class="sub">Blackwolf Run &middot; Pete Dye, 1988</p>
+          <p>The Sheboygan in play again and again, hardwoods overhead, and a routing that keeps quietly asking whether you would like to take the shorter line. Twice a U.S. Women&rsquo;s Open venue and a completely different day from the lake courses.</p>
+          <div class="spec">
+            <div><span>Par</span><span>72</span></div>
+            <div><span>Championship</span><span>6,991 yards</span></div>
+            <div><span>Rating / Slope</span><span>74.9 / 151</span></div>
+            <div><span>Host of</span><span>U.S. Women&rsquo;s Open 1998, 2012</span></div>
+            <div><span>Our tee</span><span class="tbd">To confirm</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- Meadow Valleys ---- -->
+      <div class="cell has-shot">
+        <div class="shot">
+          <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="640" height="360" fill="#18262a"/>
+            <path d="M0 140 C 160 116, 300 152, 460 132 C 550 120, 600 138, 640 130 L640 360 L0 360 Z" fill="#1d3129"/>
+            <path d="M0 210 C 170 184, 320 220, 470 198 C 560 186, 600 202, 640 194 L640 360 L0 360 Z" fill="#16261f"/>
+            <path d="M0 292 C 180 270, 340 300, 490 282 C 570 272, 610 286, 640 280 L640 360 L0 360 Z" fill="#101c17"/>
+            <ellipse cx="250" cy="238" rx="62" ry="14" fill="#22392f"/>
+            <ellipse cx="470" cy="316" rx="80" ry="16" fill="#1a2c24"/>
+            <g fill="#0e1a15" opacity=".9">
+              <ellipse cx="86" cy="164" rx="30" ry="22"/><ellipse cx="140" cy="152" rx="22" ry="16"/>
+              <ellipse cx="580" cy="158" rx="28" ry="20"/>
+            </g>
+            <g><line x1="254" y1="238" x2="254" y2="202" stroke="#c8ad78" stroke-width="1.4"/><path d="M254 202 L278 209 L254 216 Z" fill="#a8874a"/></g>
+          </svg>
+          <img src="img/meadow-valleys.jpg" alt="Blackwolf Run — Meadow Valleys" onerror="this.remove()">
+        </div>
+        <div class="cell-body">
+          <h3>Meadow Valleys</h3>
+          <p class="sub">Blackwolf Run &middot; Pete Dye, 1988</p>
+          <p>More open and more rolling than the River, and the friendliest of the four full-length courses &mdash; which at Kohler still means something. The right call for tired legs on the last morning, and carts are available.</p>
+          <div class="spec">
+            <div><span>Par</span><span>72</span></div>
+            <div><span>Championship</span><span>7,250 yards</span></div>
+            <div><span>Rating / Slope</span><span>75.1 / 145</span></div>
+            <div><span>Play</span><span>Carts available</span></div>
+            <div><span>Our tee</span><span class="tbd">To confirm</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---- The Baths, full width ---- -->
+    <div class="grid" style="grid-template-columns:1fr; margin-top:1px;">
+      <div class="cell has-shot">
+        <div class="shot" style="aspect-ratio:32/9;">
+          <svg viewBox="0 0 1280 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="1280" height="360" fill="#141f23"/>
+            <path d="M0 150 C 260 126, 500 160, 760 140 C 980 124, 1120 148, 1280 136 L1280 360 L0 360 Z" fill="#1b2e2a"/>
+            <path d="M0 232 C 300 206, 560 240, 840 218 C 1040 202, 1160 220, 1280 212 L1280 360 L0 360 Z" fill="#13221f"/>
+            <ellipse cx="300" cy="286" rx="120" ry="22" fill="#203830"/>
+            <ellipse cx="700" cy="308" rx="150" ry="24" fill="#203830"/>
+            <ellipse cx="1060" cy="284" rx="110" ry="20" fill="#203830"/>
+            <g stroke="#c8ad78" stroke-width="1.4" fill="none">
+              <line x1="300" y1="286" x2="300" y2="248"/><line x1="700" y1="308" x2="700" y2="268"/><line x1="1060" y1="284" x2="1060" y2="246"/>
+            </g>
+            <g fill="#a8874a">
+              <path d="M300 248 L324 255 L300 262 Z"/><path d="M700 268 L724 275 L700 282 Z"/><path d="M1060 246 L1084 253 L1060 260 Z"/>
+            </g>
+          </svg>
+          <img src="img/baths.jpg" alt="The Baths of Blackwolf Run" onerror="this.remove()">
+        </div>
+        <div class="cell-body">
+          <h3>The Baths</h3>
+          <p class="sub">Blackwolf Run &middot; Chris Lutzke, 2021</p>
+          <p>Ten par threes between sixty and a hundred and sixty yards, built by a Dye protégé on the old ground beside the river, with a vast putting course alongside. Nobody keeps a card here unless there is something left to settle &mdash; and this year, at four o&rsquo;clock on the last afternoon, there may well be.</p>
+          <div class="spec">
+            <div><span>Holes</span><span>Ten, all par 3</span></div>
+            <div><span>Lengths</span><span>60&ndash;160 yards</span></div>
+            <div><span>Our time</span><span>Sunday, 4:00 PM</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+  <!--  IV. SCORECARDS                                                     -->
+  <!-- =================================================================== -->
+
+  <section id="cards" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>The Cards</h2>
+        <p class="lede">Pete Dye named every hole on the Straits, which tells you most of what you need to know about him. Yardages shown from the championship tees.</p>
+      </div>
+    </div>
+
+    <div class="card-title">
+      <h3>The Straits</h3>
+      <span>Par 72 &middot; 7,452 yards &middot; Out 3,759 &middot; In 3,693</span>
+    </div>
+
+    <div class="card-cols">
+      <div class="table-wrap">
+        <table class="card">
+          <thead>
+            <tr><th>No.</th><th>Hole</th><th class="par">Par</th><th class="yds">Yards</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="hole">1</td><td class="name">Outward Bound</td><td class="par">4</td><td class="yds">364</td></tr>
+            <tr><td class="hole">2</td><td class="name">Cross Country</td><td class="par">5</td><td class="yds">593</td></tr>
+            <tr><td class="hole">3</td><td class="name">O&rsquo;Man</td><td class="par">3</td><td class="yds">181</td></tr>
+            <tr><td class="hole">4</td><td class="name">Glory</td><td class="par">4</td><td class="yds">489</td></tr>
+            <tr><td class="hole">5</td><td class="name">Snake</td><td class="par">5</td><td class="yds">603</td></tr>
+            <tr><td class="hole">6</td><td class="name">Gremlin&rsquo;s Ear</td><td class="par">4</td><td class="yds">355</td></tr>
+            <tr><td class="hole">7</td><td class="name">Shipwreck</td><td class="par">3</td><td class="yds">221</td></tr>
+            <tr><td class="hole">8</td><td class="name">On the Rocks</td><td class="par">4</td><td class="yds">507</td></tr>
+            <tr><td class="hole">9</td><td class="name">Down and Dirty</td><td class="par">4</td><td class="yds">446</td></tr>
+            <tr class="total"><td></td><td>Out</td><td class="par">36</td><td class="yds">3,759</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap">
+        <table class="card">
+          <thead>
+            <tr><th>No.</th><th>Hole</th><th class="par">Par</th><th class="yds">Yards</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="hole">10</td><td class="name">Voyageur</td><td class="par">4</td><td class="yds">361</td></tr>
+            <tr><td class="hole">11</td><td class="name">Sand Box</td><td class="par">5</td><td class="yds">563</td></tr>
+            <tr><td class="hole">12</td><td class="name">Pop Up</td><td class="par">3</td><td class="yds">143</td></tr>
+            <tr><td class="hole">13</td><td class="name">Cliff Hanger</td><td class="par">4</td><td class="yds">404</td></tr>
+            <tr><td class="hole">14</td><td class="name">Widow&rsquo;s Watch</td><td class="par">4</td><td class="yds">397</td></tr>
+            <tr><td class="hole">15</td><td class="name">Grand Strand</td><td class="par">4</td><td class="yds">518</td></tr>
+            <tr><td class="hole">16</td><td class="name">Endless Bite</td><td class="par">5</td><td class="yds">569</td></tr>
+            <tr><td class="hole">17</td><td class="name">Pinched Nerve</td><td class="par">3</td><td class="yds">223</td></tr>
+            <tr><td class="hole">18</td><td class="name">Dyeabolical</td><td class="par">4</td><td class="yds">515</td></tr>
+            <tr class="total"><td></td><td>In</td><td class="par">36</td><td class="yds">3,693</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p style="margin-top:22px; font-size:13.5px; color:var(--ink-faint); max-width:70ch;">
+      Back-tee yardages, which is emphatically not the golf course any of us will be playing &mdash; and note
+      that the Straits stretches past 7,700 for a championship. Stroke indexes and the numbers from our own
+      tees go in once the cards are in hand: photograph the official card on Thursday and it can be added
+      here before the matches start.
+    </p>
+
+    <div class="grid grid-4" style="margin-top:36px;">
+      <div class="cell">
+        <h3>The Irish</h3>
+        <p class="sub">Par 72</p>
+        <div class="spec" style="margin-top:0; border-top:0; padding-top:0;">
+          <div><span>Championship</span><span>7,201 yds</span></div>
+          <div><span>Our tee</span><span class="tbd">TBC</span></div>
+          <div><span>Index</span><span class="tbd">TBC</span></div>
+        </div>
+      </div>
+      <div class="cell">
+        <h3>The River</h3>
+        <p class="sub">Par 72</p>
+        <div class="spec" style="margin-top:0; border-top:0; padding-top:0;">
+          <div><span>Championship</span><span>6,991 yds</span></div>
+          <div><span>Rating / Slope</span><span>74.9 / 151</span></div>
+          <div><span>Our tee</span><span class="tbd">TBC</span></div>
+        </div>
+      </div>
+      <div class="cell">
+        <h3>Meadow Valleys</h3>
+        <p class="sub">Par 72</p>
+        <div class="spec" style="margin-top:0; border-top:0; padding-top:0;">
+          <div><span>Championship</span><span>7,250 yds</span></div>
+          <div><span>Rating / Slope</span><span>75.1 / 145</span></div>
+          <div><span>Our tee</span><span class="tbd">TBC</span></div>
+        </div>
+      </div>
+      <div class="cell">
+        <h3>The Baths</h3>
+        <p class="sub">Ten par threes</p>
+        <div class="spec" style="margin-top:0; border-top:0; padding-top:0;">
+          <div><span>Lengths</span><span>60&ndash;160 yds</span></div>
+          <div><span>Par</span><span>30</span></div>
+          <div><span>Strokes</span><span>None given</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+  <!--  V. THE MATCHES                                                     -->
+  <!-- =================================================================== -->
+
+  <section id="matches" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>The Matches</h2>
+        <p class="lede">A proposal, not a ruling. Seven points across the week, net throughout, first to four holds the Cup.</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Session</th><th>When</th><th>Course</th><th>Format</th><th class="num">Points</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Opening</td><td>Thu, 1:43</td><td>The River</td>
+            <td>Four-ball, net &mdash; a gentle start with a point on it</td><td class="serif-num">1</td>
+          </tr>
+          <tr>
+            <td>Session I</td><td>Fri, 8:31</td><td>The Irish</td>
+            <td>Four-ball, net</td><td class="serif-num">1</td>
+          </tr>
+          <tr>
+            <td>Session II</td><td>Fri, 3:24</td><td>The Irish</td>
+            <td>Shamble &mdash; best drive, then your own ball in</td><td class="serif-num">1</td>
+          </tr>
+          <tr>
+            <td>Session III</td><td>Sat, 12:12</td><td>The Straits</td>
+            <td>Singles, net &mdash; two matches on the biggest day</td><td class="serif-num">2</td>
+          </tr>
+          <tr>
+            <td>Session IV</td><td>Sun, 9:49</td><td>Meadow Valleys</td>
+            <td>Singles, net &mdash; new partners, the closer</td><td class="serif-num">2</td>
+          </tr>
+          <tr>
+            <td>The Baths</td><td>Sun, 4:00</td><td>Blackwolf Run</td>
+            <td>Tie-break if level. Victory lap if not.</td><td class="serif-num">&mdash;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:34px;">
+      <div class="cell">
+        <h3>The Sides</h3>
+        <p class="sub">Two against two</p>
+        <p>Fathers and sons, or drawn to balance the handicaps &mdash; the argument is half the fun and should be had at dinner on Thursday, not on the first tee on Friday.</p>
+      </div>
+      <div class="cell">
+        <h3>Strokes</h3>
+        <p class="sub">How they are given</p>
+        <p>The difference between indexes, rounded, dropped on the lowest stroke-index holes on that day&rsquo;s card. Recalculated per course, because the tees change and so does the maths.</p>
+      </div>
+      <div class="cell">
+        <h3>The Cup</h3>
+        <p class="sub">In the event of a halve</p>
+        <p>Three and a half apiece and the Cup stays where it is. If somebody wants it settled, The Baths is right there at four o&rsquo;clock with the light going.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+  <!--  VI. THE TABLE                                                      -->
+  <!-- =================================================================== -->
+
+  <section id="table" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>The Table</h2>
+        <p class="lede">Two booked, one deliberately left open. Nothing here requires a jacket, though the Immigrant Room is the sort of place where you might want one anyway.</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Evening</th><th>Where</th><th class="num">Time</th><th class="num">Party</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thursday</td><td>Whistling Straits Restaurant</td>
+            <td class="num">7:30 PM</td><td class="num">4</td><td>BYWPJ3VT</td>
+          </tr>
+          <tr>
+            <td>Friday</td><td>Open &mdash; walk into the village</td>
+            <td class="num">&mdash;</td><td class="num">4</td><td>No booking, by choice</td>
+          </tr>
+          <tr>
+            <td>Saturday</td><td>Blackwolf Run Restaurant</td>
+            <td class="num">7:30 PM</td><td class="num">4</td><td>BA4HQ4FV</td>
+          </tr>
+          <tr>
+            <td>Sunday</td><td><span class="tbd">Open</span></td>
+            <td class="num"><span class="tbd">—</span></td><td class="num">4</td><td>Depends on the flights</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid grid-4" style="margin-top:34px;">
+      <div class="cell">
+        <h3>Whistling Straits</h3>
+        <p class="sub">Thursday &middot; booked</p>
+        <p>The clubhouse dining room above the lake. The right way to open the week, and twenty minutes from Blackwolf Run &mdash; leave straight off eighteen.</p>
+      </div>
+      <div class="cell">
+        <h3>Horse &amp; Plow</h3>
+        <p class="sub">Friday &middot; the casual option</p>
+        <p>The tavern under The American Club. Beer list, good burgers, low ceilings, no ceremony. Exactly right after thirty-six on foot.</p>
+      </div>
+      <div class="cell">
+        <h3>Blackwolf Run</h3>
+        <p class="sub">Saturday &middot; booked</p>
+        <p>Timber and stone above the river valley. Unfussy and consistently good, which is the whole point on the night after the Straits.</p>
+      </div>
+      <div class="cell">
+        <h3>The Immigrant</h3>
+        <p class="sub">If one night goes formal</p>
+        <p>The fine-dining room at The American Club &mdash; six small rooms and a winery bar. Saturday is the night for it, if anyone wants one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+  <!--  VII. STAY & TRAVEL                                                 -->
+  <!-- =================================================================== -->
+
+  <section id="stay" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>Stay &amp; Travel</h2>
+        <p class="lede">Everything sits within a few minutes of everything else. The only real drive is the one from the airport &mdash; and the one to dinner on Thursday.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="cell">
+        <h3>The Carriage House</h3>
+        <p class="sub">Home for the week</p>
+        <p>The quieter house across from The American Club, and the more private of the two. Shuttles run to all of the courses; the spa and the village are a short walk.</p>
+        <div class="spec">
+          <div><span>Check in</span><span>Thu 20 Aug</span></div>
+          <div><span>Nights</span><span>Three</span></div>
+          <div><span>Check out</span><span>Sun 23 Aug</span></div>
+          <div><span>Rooms</span><span class="tbd">To confirm</span></div>
+          <div><span>Arrival time</span><span class="tbd">Resort has asked</span></div>
+        </div>
+      </div>
+
+      <div class="cell">
+        <h3>Getting There</h3>
+        <p class="sub">Flights &amp; ground</p>
+        <p>Milwaukee Mitchell is the practical airport, roughly an hour south of Kohler. Green Bay and Appleton are alternatives; O&rsquo;Hare is about two and a half hours and rarely worth it.</p>
+        <div class="spec">
+          <div><span>Outbound</span><span class="tbd">Flight &amp; time</span></div>
+          <div><span>Return</span><span class="tbd">Flight &amp; time</span></div>
+          <div><span>Ground</span><span class="tbd">Car or transfer</span></div>
+          <div><span>Sunday note</span><span>Golf until ~6 PM</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="open-items" style="margin-top:34px;">
+      <h3>Still to Settle</h3>
+      <p class="sub">Five things, none of them urgent yet</p>
+      <ul>
+        <li><b>Arrival time.</b> The resort has asked for an ETA on Thursday so they can have the welcome ready. One line back covers it.</li>
+        <li><b>Sunday night.</b> The room is three nights and check-out is Sunday, but The Baths does not finish until around six. Either add a fourth night or arrange bag storage and a late flight.</li>
+        <li><b>Saturday&rsquo;s lessons.</b> Four of them at 10:30 and 11:00, then the Straits at 12:12. Confirm the location &mdash; if the academy is at Blackwolf Run, the second pair is very tight.</li>
+        <li><b>The tees.</b> Worth agreeing on one set for the week before anyone gets on the first tee at the Straits and starts negotiating.</li>
+        <li><b>Indexes.</b> Michael and Matt still need numbers before the strokes can be worked out.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+  <!--  VIII. LOCAL KNOWLEDGE                                              -->
+  <!-- =================================================================== -->
+
+  <section id="local" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>Local Knowledge</h2>
+        <p class="lede">What the caddie will tell you on the first tee, minus the fee.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="cell">
+        <ol class="notes">
+          <li><b>Take one more club.</b> The wind off Lake Michigan is heavier and steadier than it looks from the clubhouse. Into it, take two and swing easier.</li>
+          <li><b>Everything is a bunker.</b> On the Straits, the sand outside the ropes is still sand. Ask before you ground the club &mdash; it has cost better players than us.</li>
+          <li><b>Walk it properly.</b> No carts on the Straits or the Irish, and Friday is thirty-six of them. Broken-in shoes, two pairs of socks, and a real lunch in between.</li>
+          <li><b>Trust the caddie on the greens.</b> They are reading break you cannot see from a hundred yards inland. Take the line and hit it.</li>
+        </ol>
+      </div>
+      <div class="cell">
+        <ol class="notes">
+          <li><b>Play the front edge.</b> Firm turf, low approaches, putter from off the green. This is not target golf and it does not reward flying it in.</li>
+          <li><b>Layers.</b> It can be twenty degrees cooler on the lake holes than in the village, even in August. A shell in the bag is never wasted.</li>
+          <li><b>Sunday is a cart day.</b> Meadow Valleys allows them. After three days on foot, take one and do not feel a thing about it.</li>
+          <li><b>Look up on seventeen.</b> Whatever the number ends up being, stand on that tee an extra moment. That is the one you will both still be describing in ten years.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+  <!--  IX. THE RECORD                                                     -->
+  <!-- =================================================================== -->
+
+  <section id="record" class="reveal">
+    <div class="sec-head">
+      <div class="sec-num"></div>
+      <div>
+        <h2>The Record</h2>
+        <p class="lede">Every edition, kept honestly. This is the part that will matter in twenty years.</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Year</th><th>Venue</th><th>Winner</th><th>Result</th><th>Of note</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="serif-num"><span class="tbd">Year</span></td><td><span class="tbd">Venue</span></td>
+            <td><span class="tbd">Winner</span></td><td><span class="tbd">Score</span></td>
+            <td><span class="tbd">One sentence worth keeping</span></td>
+          </tr>
+          <tr>
+            <td class="serif-num"><span class="tbd">Year</span></td><td><span class="tbd">Venue</span></td>
+            <td><span class="tbd">Winner</span></td><td><span class="tbd">Score</span></td>
+            <td><span class="tbd">One sentence worth keeping</span></td>
+          </tr>
+          <tr>
+            <td class="serif-num"><span class="tbd">Year</span></td><td><span class="tbd">Venue</span></td>
+            <td><span class="tbd">Winner</span></td><td><span class="tbd">Score</span></td>
+            <td><span class="tbd">One sentence worth keeping</span></td>
+          </tr>
+          <tr>
+            <td class="serif-num">2026</td><td>Whistling Straits</td><td>&mdash;</td><td>&mdash;</td>
+            <td>To be written.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="quote reveal">
+    <hr class="rule-thin" style="margin-bottom:clamp(38px,6vw,62px);">
+    <blockquote>The course is the excuse. The company is the reason.</blockquote>
+    <cite>Kohler, Wisconsin &middot; August 2026</cite>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="crest" width="52" height="52" viewBox="0 0 66 66" aria-hidden="true">
+      <circle cx="33" cy="33" r="31.5" fill="none" stroke="rgba(200,173,120,.5)" stroke-width="1"/>
+      <circle cx="33" cy="33" r="27" fill="none" stroke="rgba(200,173,120,.25)" stroke-width="1"/>
+      <path d="M22 44 C 27 36, 39 36, 44 44" fill="none" stroke="#c8ad78" stroke-width="1.1"/>
+      <line x1="33" y1="20" x2="33" y2="40" stroke="#c8ad78" stroke-width="1.2"/>
+      <path d="M33 20 L45 24.5 L33 29 Z" fill="#a8874a"/>
+      <circle cx="33" cy="44" r="1.6" fill="#c8ad78"/>
+    </svg>
+    <p class="f-title">The Kalson Cup</p>
+    <p class="f-sub">Kohler, Wisconsin &middot; 20&ndash;23 August 2026</p>
+  </div>
+</footer>
+
+<script>
+  /* Reveal sections on scroll */
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.06 });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+
+  /* The anthem. Shows itself only if audio/swingtown.mp3 actually loads. */
+  (function () {
+    var audio = document.getElementById('anthemAudio');
+    var bar   = document.getElementById('anthemBar');
+    var btn   = document.getElementById('anthemBtn');
+    var fill  = document.getElementById('anthemFill');
+    var back  = document.getElementById('anthemFallback');
+    if (!audio || !bar) { return; }
+
+    var settled = false;
+    function ready() { if (!settled) { settled = true; bar.hidden = false; } }
+    function missing() { if (!settled) { settled = true; back.hidden = false; } }
+
+    audio.addEventListener('loadedmetadata', ready);
+    audio.addEventListener('canplay', ready);
+    audio.addEventListener('error', missing);
+    /* Some browsers never fire either event for a 404 on a static host. */
+    setTimeout(function () { if (!settled && !audio.duration) { missing(); } }, 4000);
+
+    btn.addEventListener('click', function () {
+      if (audio.paused) {
+        audio.play().then(function () {
+          bar.classList.add('playing');
+          btn.setAttribute('aria-label', 'Pause the anthem');
+        }).catch(function () { missing(); bar.hidden = true; });
+      } else {
+        audio.pause();
+        bar.classList.remove('playing');
+        btn.setAttribute('aria-label', 'Play the anthem');
+      }
+    });
+
+    audio.addEventListener('timeupdate', function () {
+      if (audio.duration) { fill.style.width = (audio.currentTime / audio.duration * 100) + '%'; }
+    });
+    audio.addEventListener('ended', function () {
+      bar.classList.remove('playing');
+      btn.setAttribute('aria-label', 'Play the anthem');
+      fill.style.width = '0%';
+    });
+  })();
+
+  /* Highlight the section currently in view */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav.sections a'));
+    var map = {};
+    links.forEach(function (a) {
+      var el = document.querySelector(a.getAttribute('href'));
+      if (el) { map[el.id] = a; }
+    });
+    var targets = Object.keys(map).map(function (id) { return document.getElementById(id); });
+    if (!targets.length || !('IntersectionObserver' in window)) { return; }
+
+    var visible = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting; });
+      var current = targets.filter(function (t) { return visible[t.id]; })[0];
+      links.forEach(function (a) { a.classList.remove('active'); });
+      if (current) { map[current.id].classList.add('active'); }
+    }, { rootMargin: '-56px 0px -65% 0px', threshold: 0 });
+
+    targets.forEach(function (t) { io.observe(t); });
+  })();
+</script>
+
+</body>
+</html>
