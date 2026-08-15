@@ -345,6 +345,38 @@
   .card-cols{ display:grid; grid-template-columns:1fr 1fr; gap:0 46px; }
   @media (max-width:760px){ .card-cols{ grid-template-columns:1fr; gap:34px; } }
 
+  /* full scorecards transcribed from the physical cards */
+  .cardblock{ margin-top:52px; }
+  table.scorecard{ font-size:13px; min-width:660px; }
+  table.scorecard th, table.scorecard td{ padding:8px 10px 8px 0; white-space:nowrap; }
+  table.scorecard td.hole{ font-family:var(--serif); font-size:16px; color:var(--brass); width:34px; }
+  table.scorecard td.name{ font-family:var(--serif); font-size:16px; color:var(--ink); padding-right:22px; }
+  table.scorecard th.p, table.scorecard th.x, table.scorecard th.y,
+  table.scorecard td.p, table.scorecard td.x, table.scorecard td.y{
+    text-align:right; font-variant-numeric:tabular-nums;
+  }
+  table.scorecard td.p{ color:var(--ink); }
+  table.scorecard td.x{ color:var(--ink-faint); padding-right:22px; }
+  table.scorecard th.x{ padding-right:22px; }
+  table.scorecard tr.sum td, table.scorecard tr.grand td{
+    border-top:1px solid var(--rule); border-bottom:0; color:var(--ink);
+    font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+  }
+  table.scorecard tr.sum td.p, table.scorecard tr.sum td.y,
+  table.scorecard tr.grand td.p, table.scorecard tr.grand td.y{
+    font-family:var(--serif); font-size:17px; letter-spacing:0; text-transform:none;
+  }
+  table.scorecard tr.grand td{ border-top:1px solid var(--ink); }
+
+  .card-foot{ display:grid; grid-template-columns:minmax(0,320px) 1fr; gap:26px 46px; margin-top:26px; }
+  @media (max-width:760px){ .card-foot{ grid-template-columns:1fr; } }
+  table.ratings{ font-size:13px; }
+  table.ratings th, table.ratings td{ padding:7px 14px 7px 0; }
+  table.ratings th.n, table.ratings td.n{ text-align:right; font-variant-numeric:tabular-nums; }
+  .card-notes p{ font-size:13.5px; color:var(--ink-soft); margin:0 0 9px; }
+  .card-notes p b{ color:var(--ink); font-weight:500; }
+  .card-notes .pick{ color:var(--ink-faint); }
+
   /* --------------------------------------------------------------- misc -- */
   .notes{ list-style:none; margin:0; padding:0; counter-reset:note; }
   .notes li{
@@ -871,9 +903,10 @@
           <p>The Sheboygan in play again and again, hardwoods overhead, and a routing that keeps quietly asking whether you would like to take the shorter line. Twice a U.S. Women&rsquo;s Open venue and a completely different day from the lake courses.</p>
           <div class="spec">
             <div><span>Par</span><span>72</span></div>
-            <div><span>Championship</span><span>6,991 yards</span></div>
-            <div><span>Rating / Slope</span><span>74.9 / 151</span></div>
+            <div><span>Black tees</span><span>7,404 yards</span></div>
+            <div><span>Rating / Slope</span><span>76.2 / 151</span></div>
             <div><span>Host of</span><span>U.S. Women&rsquo;s Open 1998, 2012</span></div>
+            <div><span>Also</span><span>World Championships 1995&ndash;97</span></div>
             <div><span>Our tee</span><span class="tbd">To confirm</span></div>
           </div>
         </div>
@@ -903,8 +936,8 @@
           <p>More open and more rolling than the River, and the friendliest of the four full-length courses &mdash; which at Kohler still means something. The right call for tired legs on the last morning, and carts are available.</p>
           <div class="spec">
             <div><span>Par</span><span>72</span></div>
-            <div><span>Championship</span><span>7,250 yards</span></div>
-            <div><span>Rating / Slope</span><span>75.1 / 145</span></div>
+            <div><span>Black tees</span><span>7,314 yards</span></div>
+            <div><span>Rating / Slope</span><span>75.3 / 145</span></div>
             <div><span>Play</span><span>Carts available</span></div>
             <div><span>Our tee</span><span class="tbd">To confirm</span></div>
           </div>
@@ -955,7 +988,7 @@
       <div class="sec-num"></div>
       <div>
         <h2>The Cards</h2>
-        <p class="lede">Pete Dye named every hole on the Straits, which tells you most of what you need to know about him. Yardages shown from the championship tees.</p>
+        <p class="lede">Dye named every hole on all of them, which tells you most of what you need to know about him. The two Blackwolf Run cards are here in full &mdash; all five tees, par and stroke index &mdash; transcribed from the printed cards and checked against every total on them.</p>
       </div>
     </div>
 
@@ -1013,41 +1046,140 @@
       here before the matches start.
     </p>
 
-    <div class="grid grid-4" style="margin-top:36px;">
-      <div class="cell">
-        <h3>The Irish</h3>
-        <p class="sub">Par 72</p>
-        <div class="spec" style="margin-top:0; border-top:0; padding-top:0;">
-          <div><span>Championship</span><span>7,201 yds</span></div>
-          <div><span>Our tee</span><span class="tbd">TBC</span></div>
-          <div><span>Index</span><span class="tbd">TBC</span></div>
-        </div>
-      </div>
-      <div class="cell">
+
+    <div class="cardblock">
+      <div class="card-title">
         <h3>The River</h3>
-        <p class="sub">Par 72</p>
-        <div class="spec" style="margin-top:0; border-top:0; padding-top:0;">
-          <div><span>Championship</span><span>6,991 yds</span></div>
-          <div><span>Rating / Slope</span><span>74.9 / 151</span></div>
-          <div><span>Our tee</span><span class="tbd">TBC</span></div>
+        <span>Blackwolf Run &middot; Pete Dye, 1988 &middot; Par 72</span>
+      </div>
+      <div class="table-wrap">
+        <table class="scorecard">
+          <thead>
+            <tr><th>No.</th><th>Hole</th><th class="p">Par</th><th class="x">Idx</th><th class="y">Black</th><th class="y">Blue</th><th class="y">Green</th><th class="y">White</th><th class="y">Red</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="hole">1</td><td class="name">Snake</td><td class="p">5</td><td class="x">5</td><td class="y">610</td><td class="y">564</td><td class="y">526</td><td class="y">501</td><td class="y">411</td></tr>
+            <tr><td class="hole">2</td><td class="name">Burial Mounds</td><td class="p">4</td><td class="x">13</td><td class="y">377</td><td class="y">370</td><td class="y">355</td><td class="y">345</td><td class="y">310</td></tr>
+            <tr><td class="hole">3</td><td class="name">Gotcha</td><td class="p">4</td><td class="x">1</td><td class="y">468</td><td class="y">410</td><td class="y">395</td><td class="y">389</td><td class="y">295</td></tr>
+            <tr><td class="hole">4</td><td class="name">Swan Lake</td><td class="p">3</td><td class="x">15</td><td class="y">219</td><td class="y">195</td><td class="y">185</td><td class="y">146</td><td class="y">117</td></tr>
+            <tr><td class="hole">5</td><td class="name">Made in Heaven</td><td class="p">4</td><td class="x">3</td><td class="y">427</td><td class="y">400</td><td class="y">388</td><td class="y">376</td><td class="y">275</td></tr>
+            <tr><td class="hole">6</td><td class="name">Jackknife</td><td class="p">4</td><td class="x">17</td><td class="y">388</td><td class="y">361</td><td class="y">333</td><td class="y">308</td><td class="y">265</td></tr>
+            <tr><td class="hole">7</td><td class="name">Glencary</td><td class="p">4</td><td class="x">7</td><td class="y">426</td><td class="y">401</td><td class="y">374</td><td class="y">352</td><td class="y">298</td></tr>
+            <tr><td class="hole">8</td><td class="name">Hell&rsquo;s Gate</td><td class="p">5</td><td class="x">9</td><td class="y">532</td><td class="y">524</td><td class="y">492</td><td class="y">470</td><td class="y">401</td></tr>
+            <tr><td class="hole">9</td><td class="name">Cathedral Spires</td><td class="p">4</td><td class="x">11</td><td class="y">361</td><td class="y">337</td><td class="y">316</td><td class="y">302</td><td class="y">238</td></tr>
+            <tr class="sum"><td></td><td>Out</td><td class="p">37</td><td class="x"></td><td class="y">3,808</td><td class="y">3,562</td><td class="y">3,364</td><td class="y">3,189</td><td class="y">2,610</td></tr>
+            <tr><td class="hole">10</td><td class="name">River and Marsh</td><td class="p">3</td><td class="x">14</td><td class="y">227</td><td class="y">204</td><td class="y">194</td><td class="y">175</td><td class="y">147</td></tr>
+            <tr><td class="hole">11</td><td class="name">Rise and Fall</td><td class="p">5</td><td class="x">6</td><td class="y">621</td><td class="y">560</td><td class="y">536</td><td class="y">522</td><td class="y">446</td></tr>
+            <tr><td class="hole">12</td><td class="name">Long Lagoon</td><td class="p">4</td><td class="x">2</td><td class="y">486</td><td class="y">465</td><td class="y">423</td><td class="y">372</td><td class="y">333</td></tr>
+            <tr><td class="hole">13</td><td class="name">Tall Timber</td><td class="p">3</td><td class="x">10</td><td class="y">231</td><td class="y">205</td><td class="y">150</td><td class="y">135</td><td class="y">101</td></tr>
+            <tr><td class="hole">14</td><td class="name">Blind Alley</td><td class="p">4</td><td class="x">16</td><td class="y">346</td><td class="y">310</td><td class="y">304</td><td class="y">294</td><td class="y">228</td></tr>
+            <tr><td class="hole">15</td><td class="name">The Sand Pit</td><td class="p">4</td><td class="x">18</td><td class="y">374</td><td class="y">354</td><td class="y">346</td><td class="y">329</td><td class="y">290</td></tr>
+            <tr><td class="hole">16</td><td class="name">Unter Der Linden</td><td class="p">5</td><td class="x">8</td><td class="y">620</td><td class="y">560</td><td class="y">540</td><td class="y">511</td><td class="y">483</td></tr>
+            <tr><td class="hole">17</td><td class="name">Snapping Turtle</td><td class="p">3</td><td class="x">12</td><td class="y">181</td><td class="y">175</td><td class="y">168</td><td class="y">153</td><td class="y">131</td></tr>
+            <tr><td class="hole">18</td><td class="name">Dyehard</td><td class="p">4</td><td class="x">4</td><td class="y">510</td><td class="y">470</td><td class="y">440</td><td class="y">415</td><td class="y">351</td></tr>
+            <tr class="sum"><td></td><td>In</td><td class="p">35</td><td class="x"></td><td class="y">3,596</td><td class="y">3,303</td><td class="y">3,101</td><td class="y">2,906</td><td class="y">2,510</td></tr>
+            <tr class="grand"><td></td><td>Total</td><td class="p">72</td><td class="x"></td><td class="y">7,404</td><td class="y">6,865</td><td class="y">6,465</td><td class="y">6,095</td><td class="y">5,120</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-foot">
+        <div class="table-wrap ratings-wrap">
+        <table class="ratings">
+          <thead>
+            <tr><th>Tee</th><th class="n">Rating</th><th class="n">Slope</th><th class="n">Index</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Black</td><td class="n">76.2</td><td class="n">151</td><td class="n">0&ndash;2</td></tr>
+            <tr><td>Blue</td><td class="n">73.7</td><td class="n">144</td><td class="n">3&ndash;8</td></tr>
+            <tr><td>Green</td><td class="n">72.1</td><td class="n">139</td><td class="n">9&ndash;14</td></tr>
+            <tr><td>White</td><td class="n">70.3</td><td class="n">132</td><td class="n">15&ndash;20</td></tr>
+            <tr><td>White/Red</td><td class="n">68.0</td><td class="n">127</td><td class="n">21&ndash;25</td></tr>
+            <tr><td>Red</td><td class="n">65.7</td><td class="n">123</td><td class="n">26+</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="card-notes">
+          <p><b>Honours.</b> World Championships of Golf 1995&ndash;97 &middot; U.S. Women&rsquo;s Open 1998, 2012</p>
+          <p><b>Restrooms</b> following holes 3, 8, 12, 14.</p>
+          <p class="pick">Recommended tee is by index: the card&rsquo;s own guidance puts a 9&ndash;14 on the Green and a 15&ndash;20 on the White.</p>
         </div>
       </div>
-      <div class="cell">
+    </div>
+
+    <div class="cardblock">
+      <div class="card-title">
         <h3>Meadow Valleys</h3>
-        <p class="sub">Par 72</p>
-        <div class="spec" style="margin-top:0; border-top:0; padding-top:0;">
-          <div><span>Championship</span><span>7,250 yds</span></div>
-          <div><span>Rating / Slope</span><span>75.1 / 145</span></div>
-          <div><span>Our tee</span><span class="tbd">TBC</span></div>
+        <span>Blackwolf Run &middot; Pete Dye, 1988 &middot; Par 72</span>
+      </div>
+      <div class="table-wrap">
+        <table class="scorecard">
+          <thead>
+            <tr><th>No.</th><th>Hole</th><th class="p">Par</th><th class="x">Idx</th><th class="y">Black</th><th class="y">Blue</th><th class="y">Green</th><th class="y">White</th><th class="y">Red</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="hole">1</td><td class="name">Fishing Hole</td><td class="p">4</td><td class="x">7</td><td class="y">392</td><td class="y">368</td><td class="y">349</td><td class="y">335</td><td class="y">281</td></tr>
+            <tr><td class="hole">2</td><td class="name">Table Top</td><td class="p">4</td><td class="x">5</td><td class="y">446</td><td class="y">402</td><td class="y">385</td><td class="y">375</td><td class="y">278</td></tr>
+            <tr><td class="hole">3</td><td class="name">Pine Valley</td><td class="p">3</td><td class="x">15</td><td class="y">182</td><td class="y">176</td><td class="y">158</td><td class="y">142</td><td class="y">110</td></tr>
+            <tr><td class="hole">4</td><td class="name">Gamble</td><td class="p">5</td><td class="x">9</td><td class="y">565</td><td class="y">539</td><td class="y">516</td><td class="y">473</td><td class="y">428</td></tr>
+            <tr><td class="hole">5</td><td class="name">Tree Stand</td><td class="p">4</td><td class="x">11</td><td class="y">403</td><td class="y">380</td><td class="y">362</td><td class="y">340</td><td class="y">314</td></tr>
+            <tr><td class="hole">6</td><td class="name">Serpentine</td><td class="p">4</td><td class="x">1</td><td class="y">475</td><td class="y">470</td><td class="y">444</td><td class="y">406</td><td class="y">341</td></tr>
+            <tr><td class="hole">7</td><td class="name">Goose Landing</td><td class="p">5</td><td class="x">17</td><td class="y">520</td><td class="y">494</td><td class="y">488</td><td class="y">475</td><td class="y">426</td></tr>
+            <tr><td class="hole">8</td><td class="name">Wet and Wild</td><td class="p">3</td><td class="x">13</td><td class="y">240</td><td class="y">187</td><td class="y">176</td><td class="y">160</td><td class="y">112</td></tr>
+            <tr><td class="hole">9</td><td class="name">Deer Hunt</td><td class="p">4</td><td class="x">3</td><td class="y">485</td><td class="y">462</td><td class="y">432</td><td class="y">413</td><td class="y">307</td></tr>
+            <tr class="sum"><td></td><td>Out</td><td class="p">36</td><td class="x"></td><td class="y">3,708</td><td class="y">3,478</td><td class="y">3,310</td><td class="y">3,119</td><td class="y">2,597</td></tr>
+            <tr><td class="hole">10</td><td class="name">Quiver</td><td class="p">4</td><td class="x">10</td><td class="y">382</td><td class="y">366</td><td class="y">330</td><td class="y">320</td><td class="y">242</td></tr>
+            <tr><td class="hole">11</td><td class="name">High Country</td><td class="p">5</td><td class="x">14</td><td class="y">522</td><td class="y">514</td><td class="y">495</td><td class="y">487</td><td class="y">460</td></tr>
+            <tr><td class="hole">12</td><td class="name">Ledge Walk</td><td class="p">4</td><td class="x">2</td><td class="y">461</td><td class="y">438</td><td class="y">407</td><td class="y">395</td><td class="y">327</td></tr>
+            <tr><td class="hole">13</td><td class="name">Chimney</td><td class="p">4</td><td class="x">8</td><td class="y">341</td><td class="y">335</td><td class="y">313</td><td class="y">304</td><td class="y">233</td></tr>
+            <tr><td class="hole">14</td><td class="name">Nature&rsquo;s Course</td><td class="p">4</td><td class="x">6</td><td class="y">423</td><td class="y">409</td><td class="y">384</td><td class="y">376</td><td class="y">293</td></tr>
+            <tr><td class="hole">15</td><td class="name">Mercy</td><td class="p">3</td><td class="x">16</td><td class="y">227</td><td class="y">196</td><td class="y">189</td><td class="y">150</td><td class="y">103</td></tr>
+            <tr><td class="hole">16</td><td class="name">Rolling Thunder</td><td class="p">5</td><td class="x">12</td><td class="y">590</td><td class="y">544</td><td class="y">487</td><td class="y">478</td><td class="y">415</td></tr>
+            <tr><td class="hole">17</td><td class="name">Maple Syrup</td><td class="p">3</td><td class="x">18</td><td class="y">182</td><td class="y">165</td><td class="y">152</td><td class="y">138</td><td class="y">92</td></tr>
+            <tr><td class="hole">18</td><td class="name">Salmon Trap</td><td class="p">4</td><td class="x">4</td><td class="y">478</td><td class="y">439</td><td class="y">383</td><td class="y">373</td><td class="y">303</td></tr>
+            <tr class="sum"><td></td><td>In</td><td class="p">36</td><td class="x"></td><td class="y">3,606</td><td class="y">3,406</td><td class="y">3,140</td><td class="y">3,021</td><td class="y">2,468</td></tr>
+            <tr class="grand"><td></td><td>Total</td><td class="p">72</td><td class="x"></td><td class="y">7,314</td><td class="y">6,884</td><td class="y">6,450</td><td class="y">6,140</td><td class="y">5,065</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-foot">
+        <div class="table-wrap ratings-wrap">
+        <table class="ratings">
+          <thead>
+            <tr><th>Tee</th><th class="n">Rating</th><th class="n">Slope</th><th class="n">Index</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Black</td><td class="n">75.3</td><td class="n">145</td><td class="n">0&ndash;2</td></tr>
+            <tr><td>Blue</td><td class="n">73.3</td><td class="n">139</td><td class="n">3&ndash;8</td></tr>
+            <tr><td>Green</td><td class="n">71.5</td><td class="n">136</td><td class="n">9&ndash;14</td></tr>
+            <tr><td>White</td><td class="n">70.3</td><td class="n">132</td><td class="n">15&ndash;20</td></tr>
+            <tr><td>White/Red</td><td class="n">67.8</td><td class="n">128</td><td class="n">21&ndash;25</td></tr>
+            <tr><td>Red</td><td class="n">65.2</td><td class="n">123</td><td class="n">26+</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="card-notes">
+          <p><b>Honours.</b> U.S. Women&rsquo;s Open 1998, 2012</p>
+          <p><b>Restrooms</b> following holes 3, 9, 11, 15.</p>
+          <p class="pick">Recommended tee is by index: the card&rsquo;s own guidance puts a 9&ndash;14 on the Green and a 15&ndash;20 on the White.</p>
         </div>
       </div>
-      <div class="cell">
-        <h3>The Baths</h3>
-        <p class="sub">Ten par threes</p>
-        <div class="spec" style="margin-top:0; border-top:0; padding-top:0;">
-          <div><span>Lengths</span><span>60&ndash;160 yds</span></div>
-          <div><span>Par</span><span>30</span></div>
-          <div><span>Strokes</span><span>None given</span></div>
+    </div>
+
+    <div class="cardblock">
+      <div class="card-title">
+        <h3>Still to Come</h3>
+        <span>Two cards outstanding</span>
+      </div>
+      <div class="grid grid-2">
+        <div class="cell">
+          <h3>The Irish</h3>
+          <p class="sub">Par 72 &middot; Pete Dye, 2000</p>
+          <p>Played twice on Friday and the only full course without its card here yet. Photograph it on the first tee and the hole names, pars and indexes go straight in.</p>
+        </div>
+        <div class="cell">
+          <h3>The Straits</h3>
+          <p class="sub">Par 72 &middot; Pete Dye, 1998</p>
+          <p>Named holes and yardages are above; the stroke indexes are the missing piece, and they are the ones that decide where the shots fall on Saturday.</p>
         </div>
       </div>
     </div>
