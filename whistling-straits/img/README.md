@@ -11,10 +11,9 @@ back to its engraved artwork instead.
 | `irish.jpg` | The Irish course card |
 | `river.jpg` | Blackwolf Run — River card |
 | `meadow-valleys.jpg` | Blackwolf Run — Meadow Valleys card |
-| `baths.jpg` | The Baths, full-width card |
 
-Scorecard scans can go here too — `scorecard-straits.jpg` and friends — and
-they will be wired into the Cards section once they exist.
+Scorecards do not need photographs — all four are transcribed in full in the
+Cards section of the page.
 
 **Format notes.** Landscape, roughly 1600px wide, JPG or PNG. The cover image
 wants something wide and atmospheric; it sits behind the title at half opacity
